@@ -1,0 +1,17 @@
+<aside class="main-layout-sidebar">
+  <ng-content select="[main-layout-sidebar]"></ng-content>
+</aside>
+<main class="main-layout-main">
+  <header class="main-layout-header">
+    <ng-content select="[main-layout-header]"></ng-content>
+  </header>
+  <section class="main-layout-content">
+    <ng-content select="[main-layout-content]"></ng-content>
+    @if (loading()) {
+      <div class="main-layout-loading" role="status" aria-live="polite" aria-busy="true">
+        <div class="main-layout-loading__spinner"></div>
+        <p>{{ loadingText() }}</p>
+      </div>
+    }
+  </section>
+</main>

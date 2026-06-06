@@ -1,0 +1,7 @@
+<st-surface [eyebrow]="eyebrow()" [title]="title()" [description]="description()">
+  <div class="ship-info-panel__metrics">
+    @for (metric of metrics(); track metric.label) {
+      <st-stat [label]="metric.label" [value]="metric.value" [tone]="metric.tone ?? 'neutral'" />
+    }
+  </div>
+</st-surface>

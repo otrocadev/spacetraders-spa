@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Global scrollbar styling: keep it visible, but blend with the app's dark surfaces. */
+:root {
+  --app-scrollbar-size: 10px;
+  --app-scrollbar-track: rgba(7, 15, 32, 0.45);
+  --app-scrollbar-thumb: rgba(64, 106, 172, 0.55);
+  --app-scrollbar-thumb-hover: rgba(104, 154, 233, 0.75);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--app-scrollbar-thumb) var(--app-scrollbar-track);
+}
+
+*::-webkit-scrollbar {
+  width: var(--app-scrollbar-size);
+  height: var(--app-scrollbar-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--app-scrollbar-track);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--app-scrollbar-thumb);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--app-scrollbar-thumb-hover);
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}

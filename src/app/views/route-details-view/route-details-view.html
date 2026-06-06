@@ -1,0 +1,31 @@
+<app-main-layout>
+  <div main-layout-sidebar>
+    <app-main-aside [agentName]="agentName()" [navItems]="navItems()"></app-main-aside>
+  </div>
+  <div main-layout-header>
+    <app-main-header
+      [title]="title()"
+      [agentDetails]="agentDetails()"
+      [error]="agentDetailsError()"
+    ></app-main-header>
+  </div>
+
+  <div main-layout-content>
+    <section class="route-details-page">
+      @if (mode() === 'details') {
+        @if (currentRoute(); as route) {
+          <app-route-details-summary [route]="route" (editRequested)="enterEditMode()" />
+        }
+      }
+      @if (mode() === 'edit') {
+        <app-route-form
+          [currentRoute]="currentRoute()"
+          [agentHQ]="agentHQ()"
+          [systems]="systemsMap()"
+          (startRoute)="onStartRoute($event)"
+          (updateRoute)="onUpdateRoute($event)"
+        ></app-route-form>
+      }
+    </section>
+  </div>
+</app-main-layout>

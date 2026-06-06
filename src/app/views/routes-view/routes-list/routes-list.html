@@ -1,0 +1,5 @@
+<div class="route-cards-list">
+  @for (route of routesList(); track route.id) {
+    <app-route-card [route]="route" />
+  }
+</div>

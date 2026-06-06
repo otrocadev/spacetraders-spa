@@ -1,0 +1,18 @@
+.route-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  background: var(--st-surface-panel);
+  border: 1px solid var(--st-border);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--st-border-hover);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    margin: 0;
+  }
+}

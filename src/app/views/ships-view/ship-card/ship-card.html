@@ -1,0 +1,32 @@
+<article class="ship-card" (click)="onCardClick()">
+  <section class="ship-card__details">
+    <header class="ship-card__header">
+      <h2>{{ ship().symbol }}</h2>
+    </header>
+    <main class="ship-card__main">
+      <section class="ship-card__main-section">
+        <h3>Ship type</h3>
+        <st-stat label="Frame" [value]="ship().frame.name" tone="accent" />
+        <st-stat label="Role" [value]="ship().registration.role" tone="brand" />
+      </section>
+      <section class="ship-card__main-section">
+        <h3>Location</h3>
+        <st-stat label="System" [value]="ship().nav.systemSymbol" tone="accent" />
+        <st-stat label="Waypoint" [value]="ship().nav.waypointSymbol" tone="brand" />
+      </section>
+      <section class="ship-card__main-section">
+        <h3>Navigation</h3>
+        <st-stat label="Fly-mode" [value]="ship().nav.flightMode" tone="accent" />
+        <st-stat label="Waypoint" [value]="ship().nav.waypointSymbol" tone="brand" />
+      </section>
+    </main>
+  </section>
+  <section class="ship-card__img-wrapper">
+    <main class="ship-card__img">
+      <img [src]="shipImg()" />
+      <div class="ship-card__badges">
+        <app-badge tone="neutral">{{ ship().nav.status }}</app-badge>
+      </div>
+    </main>
+  </section>
+</article>

@@ -1,0 +1,18 @@
+<h2 class="main-header__title">
+  {{ title() }}
+</h2>
+<section class="chips">
+  @if (error()) {
+    <app-header-agent-details [factionSymbol]="null" [credits]="null"></app-header-agent-details>
+  } @else if (agentDetails()) {
+    <app-header-agent-details
+      [factionSymbol]="agentDetails()!.startingFaction"
+      [credits]="agentDetails()!.credits"
+    ></app-header-agent-details>
+  } @else {
+    <app-header-agent-details
+      [factionSymbol]="'loading'"
+      [credits]="'loading'"
+    ></app-header-agent-details>
+  }
+</section>

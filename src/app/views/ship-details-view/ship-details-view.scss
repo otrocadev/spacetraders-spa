@@ -1,0 +1,8 @@
+.ship-details-view__empty {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: var(--st-surface-panel);
+  border: 1px solid var(--st-border);
+  color: var(--st-danger, #b42318);
+}

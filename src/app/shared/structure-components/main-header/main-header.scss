@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header__nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.main-header__title {
+  font-family: var(--st-font-display);
+  font-size: 2rem;
+  font-weight: 800;
+}

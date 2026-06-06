@@ -1,0 +1,35 @@
+.login-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  padding: 2rem;
+}
+
+.login-surface {
+  width: 100%;
+  max-width: 60rem;
+}
+
+.login-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.login-form st-input {
+  width: 100%;
+}
+
+.login-form st-button {
+  align-self: flex-end;
+  padding: 0.75rem 2rem;
+}
+
+.login-error {
+  margin: -0.5rem 0 0;
+  color: #ef4444;
+  font-size: 0.875rem;
+}

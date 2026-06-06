@@ -1,0 +1,20 @@
+<app-main-layout>
+  <div main-layout-sidebar>
+    <app-main-aside [agentName]="agentName()" [navItems]="navItems()"></app-main-aside>
+  </div>
+  <div main-layout-header>
+    <app-main-header
+      [title]="ship()!.symbol"
+      [agentDetails]="agentDetails()"
+      [error]="agentDetailsError()"
+    ></app-main-header>
+  </div>
+
+  <div main-layout-content>
+    @if (ship()) {
+      <app-ship-details-card [ship]="ship()!"></app-ship-details-card>
+    } @else {
+      <p class="ship-details-view__empty">Unable to load ship details.</p>
+    }
+  </div>
+</app-main-layout>

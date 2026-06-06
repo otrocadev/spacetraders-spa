@@ -1,0 +1,5 @@
+<div class="ship-cards-list">
+  @for (ship of shipsList(); track $index) {
+    <app-ship-card [ship]="ship" (shipClicked)="onShipCardClick($event)" />
+  }
+</div>

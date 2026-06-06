@@ -1,0 +1,44 @@
+.main-aside-nav-item {
+  display: flex;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--st-border);
+  border-radius: 0.5rem;
+  background: var(--st-surface);
+  color: var(--st-ink-muted);
+  text-align: left;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    color 160ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: var(--st-border-brand);
+  }
+
+  &--active {
+    border-color: var(--st-border-brand);
+    color: var(--st-ink);
+    background: color-mix(in srgb, var(--st-surface) 86%, var(--st-brand) 14%);
+  }
+
+  &__name {
+    font-weight: 600;
+    flex: 1;
+  }
+
+  &__count {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--st-line);
+    color: var(--st-ink);
+    border: 1px solid var(--st-border);
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+  }
+}

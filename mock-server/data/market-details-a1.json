@@ -1,0 +1,311 @@
+{
+  "data": {
+    "symbol": "X1-YP72-A1",
+    "exports": [],
+    "imports": [
+      {
+        "symbol": "FOOD",
+        "name": "Galactic Cuisine",
+        "description": "A diverse range of foods from different planets, including fresh produce, meats, and prepared meals."
+      },
+      {
+        "symbol": "JEWELRY",
+        "name": "Jewelry",
+        "description": "Exquisite and valuable pieces of jewelry made from rare materials and precious gems."
+      },
+      {
+        "symbol": "MEDICINE",
+        "name": "Medicine",
+        "description": "Medical products, including drugs, treatments, and medical equipment."
+      },
+      {
+        "symbol": "CLOTHING",
+        "name": "Clothing",
+        "description": "A wide range of clothing and fashion items, including garments, accessories, and textiles."
+      },
+      {
+        "symbol": "EQUIPMENT",
+        "name": "Equipment",
+        "description": "Tools and equipment used in various industries and applications."
+      },
+      {
+        "symbol": "CYBER_IMPLANTS",
+        "name": "Cyber Implants",
+        "description": "Advanced implants that augment the human body with cybernetic enhancements, such as enhanced strength, speed, or intelligence."
+      }
+    ],
+    "exchange": [
+      {
+        "symbol": "FUEL",
+        "name": "Fuel",
+        "description": "High-energy fuel used in spacecraft propulsion systems to enable long-distance space travel."
+      }
+    ],
+    "transactions": [
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-92",
+        "tradeSymbol": "MEDICINE",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 4653,
+        "totalPrice": 93060,
+        "timestamp": "2026-06-02T18:07:47.376Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-104",
+        "tradeSymbol": "JEWELRY",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 3603,
+        "totalPrice": 72060,
+        "timestamp": "2026-06-02T17:54:51.377Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-B4",
+        "tradeSymbol": "MEDICINE",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 4769,
+        "totalPrice": 95380,
+        "timestamp": "2026-06-02T17:40:02.782Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-119",
+        "tradeSymbol": "JEWELRY",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 3643,
+        "totalPrice": 72860,
+        "timestamp": "2026-06-02T17:24:36.316Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-119",
+        "tradeSymbol": "CLOTHING",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 5106,
+        "totalPrice": 102120,
+        "timestamp": "2026-06-02T16:19:44.211Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-104",
+        "tradeSymbol": "FUEL",
+        "type": "PURCHASE",
+        "units": 6,
+        "pricePerUnit": 72,
+        "totalPrice": 432,
+        "timestamp": "2026-06-02T16:16:10.681Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-104",
+        "tradeSymbol": "JEWELRY",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 3578,
+        "totalPrice": 71560,
+        "timestamp": "2026-06-02T16:16:10.155Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-92",
+        "tradeSymbol": "MEDICINE",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 4713,
+        "totalPrice": 94260,
+        "timestamp": "2026-06-02T16:09:37.487Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-119",
+        "tradeSymbol": "FUEL",
+        "type": "PURCHASE",
+        "units": 6,
+        "pricePerUnit": 72,
+        "totalPrice": 432,
+        "timestamp": "2026-06-02T15:06:58.566Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-119",
+        "tradeSymbol": "JEWELRY",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 3568,
+        "totalPrice": 71360,
+        "timestamp": "2026-06-02T15:06:57.782Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-104",
+        "tradeSymbol": "JEWELRY",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 3563,
+        "totalPrice": 71260,
+        "timestamp": "2026-06-02T14:11:43.259Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-92",
+        "tradeSymbol": "CLOTHING",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 4933,
+        "totalPrice": 98660,
+        "timestamp": "2026-06-02T14:07:10.571Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-119",
+        "tradeSymbol": "FUEL",
+        "type": "PURCHASE",
+        "units": 6,
+        "pricePerUnit": 72,
+        "totalPrice": 432,
+        "timestamp": "2026-06-02T13:37:28.852Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-119",
+        "tradeSymbol": "MEDICINE",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 4598,
+        "totalPrice": 91960,
+        "timestamp": "2026-06-02T13:37:27.800Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-B4",
+        "tradeSymbol": "JEWELRY",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 3547,
+        "totalPrice": 70940,
+        "timestamp": "2026-06-02T13:17:37.124Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-104",
+        "tradeSymbol": "FUEL",
+        "type": "PURCHASE",
+        "units": 6,
+        "pricePerUnit": 72,
+        "totalPrice": 432,
+        "timestamp": "2026-06-02T13:13:44.908Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-104",
+        "tradeSymbol": "CLOTHING",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 4977,
+        "totalPrice": 99540,
+        "timestamp": "2026-06-02T13:13:44.411Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-119",
+        "tradeSymbol": "JEWELRY",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 3525,
+        "totalPrice": 70500,
+        "timestamp": "2026-06-02T12:09:25.098Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-119",
+        "tradeSymbol": "CLOTHING",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 5029,
+        "totalPrice": 100580,
+        "timestamp": "2026-06-02T12:09:24.001Z"
+      },
+      {
+        "waypointSymbol": "X1-YP72-A1",
+        "shipSymbol": "WHATER-119",
+        "tradeSymbol": "JEWELRY",
+        "type": "SELL",
+        "units": 20,
+        "pricePerUnit": 3573,
+        "totalPrice": 71460,
+        "timestamp": "2026-06-02T11:45:34.445Z"
+      }
+    ],
+    "tradeGoods": [
+      {
+        "symbol": "FOOD",
+        "type": "IMPORT",
+        "tradeVolume": 60,
+        "supply": "SCARCE",
+        "purchasePrice": 4696,
+        "sellPrice": 2329,
+        "activity": "WEAK"
+      },
+      {
+        "symbol": "FUEL",
+        "type": "EXCHANGE",
+        "tradeVolume": 180,
+        "supply": "MODERATE",
+        "purchasePrice": 72,
+        "sellPrice": 68
+      },
+      {
+        "symbol": "JEWELRY",
+        "type": "IMPORT",
+        "tradeVolume": 20,
+        "supply": "LIMITED",
+        "purchasePrice": 7384,
+        "sellPrice": 3607,
+        "activity": "GROWING"
+      },
+      {
+        "symbol": "MEDICINE",
+        "type": "IMPORT",
+        "tradeVolume": 20,
+        "supply": "MODERATE",
+        "purchasePrice": 9444,
+        "sellPrice": 4539,
+        "activity": "WEAK"
+      },
+      {
+        "symbol": "CLOTHING",
+        "type": "IMPORT",
+        "tradeVolume": 20,
+        "supply": "SCARCE",
+        "purchasePrice": 10892,
+        "sellPrice": 5318,
+        "activity": "GROWING"
+      },
+      {
+        "symbol": "EQUIPMENT",
+        "type": "IMPORT",
+        "tradeVolume": 20,
+        "supply": "SCARCE",
+        "purchasePrice": 6872,
+        "sellPrice": 3388,
+        "activity": "WEAK"
+      },
+      {
+        "symbol": "CYBER_IMPLANTS",
+        "type": "IMPORT",
+        "tradeVolume": 6,
+        "supply": "SCARCE",
+        "purchasePrice": 114120,
+        "sellPrice": 56935,
+        "activity": "WEAK"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+<app-main-layout>
+  <div main-layout-sidebar>
+    <app-main-aside [agentName]="agentName()" [navItems]="navItems()"></app-main-aside>
+  </div>
+  <div main-layout-header>
+    <app-main-header
+      [title]="title"
+      [agentDetails]="agentDetails()"
+      [error]="agentDetailsError()"
+    ></app-main-header>
+  </div>
+
+  <div main-layout-content>
+    <div class="routes-view__actions">
+      <st-button type="button" tone="accent" (click)="onCreateRoute()">
+        New route
+      </st-button>
+    </div>
+
+    @if (routesList().length) {
+      <app-routes-list [routesList]="routesList()!"></app-routes-list>
+    } @else {
+      <p class="routes-view__empty-state">No routes yet. Create one from the route editor.</p>
+    }
+  </div>
+</app-main-layout>

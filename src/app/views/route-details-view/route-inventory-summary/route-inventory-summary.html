@@ -1,0 +1,18 @@
+<article class="inventory-detail" [class.inventory-detail--error]="overCapacity()">
+  <header>
+    <h3>Inventory Preview</h3>
+    <span>Total Items: {{ totalItems() }}/{{ capacity() }}</span>
+  </header>
+
+  <main>
+    @for (item of inventory(); track item.symbol) {
+      <div class="inventory-item">
+        <p>{{ item.name }}: {{ item.quantity }}</p>
+      </div>
+    }
+  </main>
+
+  @if (overCapacity()) {
+    <p class="inventory-detail__error">{{ errorMessage() }}</p>
+  }
+</article>

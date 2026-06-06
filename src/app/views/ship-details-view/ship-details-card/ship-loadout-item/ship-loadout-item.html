@@ -1,0 +1,12 @@
+<st-surface [title]="title()" [description]="description()">
+  <div class="ship-loadout-item__metrics">
+    @for (metric of metrics(); track metric.label) {
+      <st-stat
+        [label]="metric.label"
+        [value]="metric.value"
+        [tone]="metric.tone ?? 'neutral'"
+        size="sm"
+      />
+    }
+  </div>
+</st-surface>

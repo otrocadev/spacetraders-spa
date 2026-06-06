@@ -1,0 +1,57 @@
+.route-details-summary {
+  display: grid;
+  gap: 1rem;
+}
+
+.route-details-summary__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.route-details-summary__eyebrow,
+.route-details-summary__muted {
+  margin: 0;
+  color: var(--st-text-muted, #475569);
+}
+
+.route-details-summary__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.route-details-summary__meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  p {
+    margin: 0;
+  }
+}
+
+.route-details-summary__steps {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.route-details-summary__step {
+  padding: 1rem;
+  border: 1px solid var(--st-border);
+  border-radius: 0.75rem;
+  background: var(--st-surface-panel);
+
+  h3,
+  p,
+  ul {
+    margin: 0;
+  }
+
+  ul {
+    margin-top: 0.75rem;
+    padding-left: 1.25rem;
+  }
+}

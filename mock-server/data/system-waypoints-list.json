@@ -1,0 +1,344 @@
+{
+  "data": [
+    {
+      "symbol": "X1-YP72-A1",
+      "type": "PLANET",
+      "systemSymbol": "X1-YP72",
+      "x": 24,
+      "y": -1,
+      "orbitals": [
+        {
+          "symbol": "X1-YP72-A2"
+        },
+        {
+          "symbol": "X1-YP72-A3"
+        },
+        {
+          "symbol": "X1-YP72-A4"
+        }
+      ],
+      "traits": [
+        {
+          "symbol": "ROCKY",
+          "name": "Rocky",
+          "description": "A world with a rugged, rocky landscape, rich in minerals and other resources, providing a variety of opportunities for mining, research, and exploration."
+        },
+        {
+          "symbol": "OUTPOST",
+          "name": "Outpost",
+          "description": "A small, remote settlement providing essential services and a safe haven for travelers passing through."
+        },
+        {
+          "symbol": "DRY_SEABEDS",
+          "name": "Dry Seabeds",
+          "description": "Vast, desolate landscapes that once held oceans, now exposing the remnants of ancient marine life and providing opportunities for the discovery of valuable resources."
+        },
+        {
+          "symbol": "FOSSILS",
+          "name": "Fossils",
+          "description": "A waypoint rich in the remains of ancient life, offering a valuable window into the past and the potential for scientific discovery."
+        },
+        {
+          "symbol": "PERPETUAL_OVERCAST",
+          "name": "Perpetual Overcast",
+          "description": "A location with a constant cloud cover, resulting in a perpetually dim and shadowy environment, often impacting local weather and ecosystems."
+        },
+        {
+          "symbol": "MARKETPLACE",
+          "name": "Marketplace",
+          "description": "A thriving center of commerce where traders from across the galaxy gather to buy, sell, and exchange goods."
+        }
+      ],
+      "isUnderConstruction": false,
+      "faction": {
+        "symbol": "OMEGA"
+      },
+      "modifiers": [],
+      "chart": {
+        "waypointSymbol": "X1-YP72-A1",
+        "submittedBy": "OMEGA",
+        "submittedOn": "2026-05-31T13:01:13.540Z"
+      }
+    },
+    {
+      "symbol": "X1-YP72-EA5A",
+      "type": "ENGINEERED_ASTEROID",
+      "systemSymbol": "X1-YP72",
+      "x": 21,
+      "y": 15,
+      "orbitals": [],
+      "traits": [
+        {
+          "symbol": "COMMON_METAL_DEPOSITS",
+          "name": "Common Metal Deposits",
+          "description": "A waypoint rich in common metal ores like iron, copper, and aluminum, essential for construction and manufacturing."
+        },
+        {
+          "symbol": "STRIPPED",
+          "name": "Stripped",
+          "description": "A location that has been over-mined or over-harvested, resulting in depleted resources and barren landscapes."
+        },
+        {
+          "symbol": "MARKETPLACE",
+          "name": "Marketplace",
+          "description": "A thriving center of commerce where traders from across the galaxy gather to buy, sell, and exchange goods."
+        }
+      ],
+      "isUnderConstruction": false,
+      "faction": {
+        "symbol": "OMEGA"
+      },
+      "modifiers": [],
+      "chart": {
+        "waypointSymbol": "X1-YP72-EA5A",
+        "submittedBy": "OMEGA",
+        "submittedOn": "2026-05-31T13:01:13.540Z"
+      }
+    },
+    {
+      "symbol": "X1-YP72-B6",
+      "type": "FUEL_STATION",
+      "systemSymbol": "X1-YP72",
+      "x": 186,
+      "y": -40,
+      "orbitals": [],
+      "traits": [
+        {
+          "symbol": "MARKETPLACE",
+          "name": "Marketplace",
+          "description": "A thriving center of commerce where traders from across the galaxy gather to buy, sell, and exchange goods."
+        }
+      ],
+      "isUnderConstruction": false,
+      "faction": {
+        "symbol": "OMEGA"
+      },
+      "modifiers": [],
+      "chart": {
+        "waypointSymbol": "X1-YP72-B6",
+        "submittedBy": "OMEGA",
+        "submittedOn": "2026-05-31T13:01:13.540Z"
+      }
+    },
+    {
+      "symbol": "X1-YP72-B7",
+      "type": "ASTEROID_BASE",
+      "systemSymbol": "X1-YP72",
+      "x": 342,
+      "y": -35,
+      "orbitals": [],
+      "traits": [
+        {
+          "symbol": "HOLLOWED_INTERIOR",
+          "name": "Hollowed Interior",
+          "description": "A location with large hollow spaces beneath its surface, providing unique opportunities for subterranean construction and resource extraction, but also posing risks of structural instability."
+        },
+        {
+          "symbol": "OUTPOST",
+          "name": "Outpost",
+          "description": "A small, remote settlement providing essential services and a safe haven for travelers passing through."
+        },
+        {
+          "symbol": "MARKETPLACE",
+          "name": "Marketplace",
+          "description": "A thriving center of commerce where traders from across the galaxy gather to buy, sell, and exchange goods."
+        }
+      ],
+      "isUnderConstruction": false,
+      "faction": {
+        "symbol": "OMEGA"
+      },
+      "modifiers": [],
+      "chart": {
+        "waypointSymbol": "X1-YP72-B7",
+        "submittedBy": "OMEGA",
+        "submittedOn": "2026-05-31T13:01:13.540Z"
+      }
+    },
+    {
+      "symbol": "X1-YP72-B8",
+      "type": "ASTEROID",
+      "systemSymbol": "X1-YP72",
+      "x": 350,
+      "y": 26,
+      "orbitals": [],
+      "traits": [
+        {
+          "symbol": "MINERAL_DEPOSITS",
+          "name": "Mineral Deposits",
+          "description": "Abundant mineral resources, attracting mining operations and providing valuable materials such as silicon crystals and quartz sand for various industries."
+        },
+        {
+          "symbol": "DEBRIS_CLUSTER",
+          "name": "Debris Cluster",
+          "description": "A region filled with hazardous debris and remnants of celestial bodies or man-made objects, requiring advanced navigational capabilities for ships passing through."
+        }
+      ],
+      "isUnderConstruction": false,
+      "faction": {
+        "symbol": "OMEGA"
+      },
+      "modifiers": [],
+      "chart": {
+        "waypointSymbol": "X1-YP72-B8",
+        "submittedBy": "OMEGA",
+        "submittedOn": "2026-05-31T13:01:13.540Z"
+      }
+    },
+    {
+      "symbol": "X1-YP72-B9",
+      "type": "ASTEROID",
+      "systemSymbol": "X1-YP72",
+      "x": 342,
+      "y": 115,
+      "orbitals": [],
+      "traits": [
+        {
+          "symbol": "MINERAL_DEPOSITS",
+          "name": "Mineral Deposits",
+          "description": "Abundant mineral resources, attracting mining operations and providing valuable materials such as silicon crystals and quartz sand for various industries."
+        },
+        {
+          "symbol": "RADIOACTIVE",
+          "name": "Radioactive",
+          "description": "A hazardous location with elevated levels of radiation, requiring specialized equipment and shielding for safe habitation and exploration."
+        }
+      ],
+      "isUnderConstruction": false,
+      "faction": {
+        "symbol": "OMEGA"
+      },
+      "modifiers": [],
+      "chart": {
+        "waypointSymbol": "X1-YP72-B9",
+        "submittedBy": "OMEGA",
+        "submittedOn": "2026-05-31T13:01:13.540Z"
+      }
+    },
+    {
+      "symbol": "X1-YP72-B10",
+      "type": "ASTEROID",
+      "systemSymbol": "X1-YP72",
+      "x": 251,
+      "y": 243,
+      "orbitals": [],
+      "traits": [
+        {
+          "symbol": "COMMON_METAL_DEPOSITS",
+          "name": "Common Metal Deposits",
+          "description": "A waypoint rich in common metal ores like iron, copper, and aluminum, essential for construction and manufacturing."
+        },
+        {
+          "symbol": "DEEP_CRATERS",
+          "name": "Deep Craters",
+          "description": "Marked by deep, expansive craters, potentially formed by ancient meteor impacts. These formations may offer hidden resources but also pose challenges for mobility and construction."
+        },
+        {
+          "symbol": "EXPLOSIVE_GASES",
+          "name": "Explosive Gases",
+          "description": "A volatile environment filled with highly reactive gases, posing a constant risk to those who venture too close and offering opportunities for harvesting valuable materials such as hydrocarbons."
+        },
+        {
+          "symbol": "MICRO_GRAVITY_ANOMALIES",
+          "name": "Micro-Gravity Anomalies",
+          "description": "Unpredictable gravity fields, making navigation and construction particularly challenging. These anomalies may also yield unique scientific research opportunities."
+        }
+      ],
+      "isUnderConstruction": false,
+      "faction": {
+        "symbol": "OMEGA"
+      },
+      "modifiers": [],
+      "chart": {
+        "waypointSymbol": "X1-YP72-B10",
+        "submittedBy": "OMEGA",
+        "submittedOn": "2026-05-31T13:01:13.540Z"
+      }
+    },
+    {
+      "symbol": "X1-YP72-B11",
+      "type": "ASTEROID",
+      "systemSymbol": "X1-YP72",
+      "x": 345,
+      "y": 43,
+      "orbitals": [],
+      "traits": [
+        {
+          "symbol": "COMMON_METAL_DEPOSITS",
+          "name": "Common Metal Deposits",
+          "description": "A waypoint rich in common metal ores like iron, copper, and aluminum, essential for construction and manufacturing."
+        },
+        {
+          "symbol": "SHALLOW_CRATERS",
+          "name": "Shallow Craters",
+          "description": "Numerous shallow craters, offering easier access to sub-surface resources but also creating an uneven terrain that can complicate land-based activities."
+        }
+      ],
+      "isUnderConstruction": false,
+      "faction": {
+        "symbol": "OMEGA"
+      },
+      "modifiers": [],
+      "chart": {
+        "waypointSymbol": "X1-YP72-B11",
+        "submittedBy": "OMEGA",
+        "submittedOn": "2026-05-31T13:01:13.540Z"
+      }
+    },
+    {
+      "symbol": "X1-YP72-B12",
+      "type": "ASTEROID",
+      "systemSymbol": "X1-YP72",
+      "x": 148,
+      "y": 293,
+      "orbitals": [],
+      "traits": [
+        {
+          "symbol": "MINERAL_DEPOSITS",
+          "name": "Mineral Deposits",
+          "description": "Abundant mineral resources, attracting mining operations and providing valuable materials such as silicon crystals and quartz sand for various industries."
+        }
+      ],
+      "isUnderConstruction": false,
+      "faction": {
+        "symbol": "OMEGA"
+      },
+      "modifiers": [],
+      "chart": {
+        "waypointSymbol": "X1-YP72-B12",
+        "submittedBy": "OMEGA",
+        "submittedOn": "2026-05-31T13:01:13.540Z"
+      }
+    },
+    {
+      "symbol": "X1-YP72-B13",
+      "type": "ASTEROID",
+      "systemSymbol": "X1-YP72",
+      "x": 181,
+      "y": 340,
+      "orbitals": [],
+      "traits": [
+        {
+          "symbol": "COMMON_METAL_DEPOSITS",
+          "name": "Common Metal Deposits",
+          "description": "A waypoint rich in common metal ores like iron, copper, and aluminum, essential for construction and manufacturing."
+        }
+      ],
+      "isUnderConstruction": false,
+      "faction": {
+        "symbol": "OMEGA"
+      },
+      "modifiers": [],
+      "chart": {
+        "waypointSymbol": "X1-YP72-B13",
+        "submittedBy": "OMEGA",
+        "submittedOn": "2026-05-31T13:01:13.540Z"
+      }
+    }
+  ],
+  "meta": {
+    "total": 88,
+    "page": 1,
+    "limit": 10
+  }
+}

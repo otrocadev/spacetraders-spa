@@ -1,0 +1,46 @@
+<section class="route-details-summary">
+  <header class="route-details-summary__header">
+    <div>
+      <p class="route-details-summary__eyebrow">Route details</p>
+      <h2>{{ route().name || 'Unnamed route' }}</h2>
+    </div>
+
+    <st-button type="button" tone="accent" (click)="onEditRequested()">Edit route</st-button>
+  </header>
+
+  <div class="route-details-summary__meta">
+    <p><strong>Steps:</strong> {{ route().steps.length }}</p>
+    <p><strong>Capacity:</strong> {{ route().virtualInvertoryCapacity }}</p>
+    <p><strong>Inventory items:</strong> {{ route().virtualInventory.length }}</p>
+  </div>
+
+  <app-route-inventory-summary
+    [inventory]="route().virtualInventory"
+    [capacity]="route().virtualInvertoryCapacity"
+  ></app-route-inventory-summary>
+
+  <div class="route-details-summary__steps">
+    @for (step of route().steps; track step.index) {
+      <article class="route-details-summary__step">
+        <header>
+          <h3>Step {{ step.index + 1 }}</h3>
+        </header>
+        <p>
+          {{ step.origin.waypointSymbol }}
+          →
+          {{ step.destination.waypointSymbol || 'Pending destination' }}
+        </p>
+
+        @if (step.comercialActions?.length) {
+          <ul>
+            @for (action of step.comercialActions; track $index) {
+              <li>{{ action.type }} {{ action.quantity }} {{ action.item }}</li>
+            }
+          </ul>
+        } @else {
+          <p class="route-details-summary__muted">No marketplace actions yet.</p>
+        }
+      </article>
+    }
+  </div>
+</section>

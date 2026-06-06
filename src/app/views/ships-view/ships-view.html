@@ -1,0 +1,26 @@
+<app-main-layout [loading]="shipLoading()" loadingText="Loading ships...">
+  <div main-layout-sidebar>
+    <app-main-aside [agentName]="agentName()" [navItems]="navItems()"></app-main-aside>
+  </div>
+  <div main-layout-header>
+    <app-main-header
+      [title]="title"
+      [agentDetails]="agentDetails()"
+      [error]="agentDetailsError()"
+    ></app-main-header>
+  </div>
+
+  <div main-layout-content>
+    <st-toast
+      #errorToast
+      [message]="shipError()!"
+      tone="accent"
+      [duration]="6000"
+      (dismissed)="onErrorToastDismissed()"
+    />
+
+    @if (shipsList()) {
+      <app-ships-list [shipsList]="shipsList()!"></app-ships-list>
+    }
+  </div>
+</app-main-layout>

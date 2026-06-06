@@ -1,0 +1,14 @@
+<header>
+  <h1>Spaceship Traders</h1>
+  <nav class="aside-nav">
+    <st-stat label="Agent" [value]="agentName()" tone="brand" />
+    @for (item of navItems(); track $index) {
+      <app-main-aside-nav-item [itemDetails]="item"></app-main-aside-nav-item>
+    }
+  </nav>
+</header>
+<footer>
+  <article>
+    <st-button variant="secondary" tone="accent" (click)="logout()">Logout</st-button>
+  </article>
+</footer>

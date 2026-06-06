@@ -1,0 +1,14 @@
+.route-cards-list {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 1450px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 2040px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,12 @@
+<st-surface tone="brand">
+  <div class="icon-chip">
+    <i-tabler-icon class="icon-chip__icon" [name]="icon()" />
+    @if (displayText() === 'loading') {
+      <span class="icon-chip__name">Loading...</span>
+    } @else if (displayText() === null) {
+      <span class="icon-chip__name">Error</span>
+    } @else {
+      <span class="icon-chip__name">{{ displayText() }}</span>
+    }
+  </div>
+</st-surface>

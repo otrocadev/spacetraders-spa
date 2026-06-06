@@ -1,0 +1,60 @@
+[
+  {
+    "request": {
+      "url": "^/v2/my/agent$",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer amazing-token"
+      }
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "file": "./data/agent-details.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/v2/my/ships$",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer amazing-token"
+      }
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "file": "./data/ships-list.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/v2/systems/X1-YP72/waypoints$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "file": "./data/system-waypoints-list.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/v2/systems/X1-YP72/waypoints/X1-YP72-A1/market$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "file": "./data/market-details-a1.json"
+    }
+  }
+]

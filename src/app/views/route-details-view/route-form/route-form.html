@@ -1,0 +1,103 @@
+<form [formGroup]="routeForm">
+  <app-input-debounce
+    [control]="routeForm.controls.routeName"
+    label="Route Name"
+    placeholder="Insert the name of your route"
+    tone="accent"
+    [debounceMs]="1000"
+    [errorMessages]="routeNameErrorMessages"
+    defaultErrorText="Invalid route name"
+  ></app-input-debounce>
+
+  @if (steps.length === 0) {
+    <st-button (click)="insertFirstRouteWaypoint()" type="button" tone="accent">
+      Start route
+    </st-button>
+  } @else {
+    <app-route-inventory-summary
+      [inventory]="currentRoute()?.virtualInventory ?? []"
+      [capacity]="currentRoute()?.virtualInvertoryCapacity ?? 0"
+    ></app-route-inventory-summary>
+    <div formArrayName="steps" class="route-steps">
+      @for (step of steps.controls; let i = $index; track i) {
+        <div [formGroupName]="i">
+          <h4>Step {{ i + 1 }}</h4>
+          <article class="route-step">
+            <div class="route-step__waypoints">
+              <div class="route-step__waypoint">
+                <div class="route-step__origin-waypoint">
+                  <p class="route-step__origin-waypoint-title">
+                    {{ step.get('originWaypoint')?.value }}
+                  </p>
+                  <p>Origin</p>
+                </div>
+              </div>
+
+              <div class="route-step__waypoint">
+                <st-dropdown
+                  [label]="'Destination'"
+                  [items]="getDestinationOptions(i)"
+                  tone="accent"
+                  [selected]="step.get('destinationWaypoint')?.value"
+                  (selectedChange)="onDropdownDestinationChange(i, $event)"
+                />
+              </div>
+            </div>
+
+            @if (hasOriginMarketplace(i)) {
+              <div formArrayName="marketplaceActions" class="route-step__trade-options-container">
+                <header>Marketplace Actions</header>
+                @for (action of getMarketplaceActionsArray(i).controls; let j = $index; track j) {
+                  <div [formGroupName]="j" class="route-step__trade-options-action">
+                    <st-dropdown
+                      [label]="'Order type'"
+                      [items]="orderTypeOptions"
+                      tone="accent"
+                      [selected]="action.get('orderType')?.value"
+                      (selectedChange)="onOrderTypeChange(i, j, $event)"
+                    />
+
+                    <label>
+                      Trade good
+                      <select formControlName="tradeSymbol">
+                        <option value="">Select a good</option>
+                        @for (option of getTradeGoodOptions(i, j); track option.value) {
+                          <option [value]="option.value">{{ option.label }}</option>
+                        }
+                      </select>
+                    </label>
+
+                    <label>
+                      Units
+                      <input formControlName="units" type="number" min="1" />
+                    </label>
+                  </div>
+                }
+              </div>
+
+              <st-button
+                (click)="addMarketplaceAction(i)"
+                variant="secondary"
+                tone="accent"
+                type="button"
+              >
+                Add marketplace action
+              </st-button>
+            }
+          </article>
+        </div>
+      }
+    </div>
+
+    <st-button
+      [disabled]="!canAddNavigationStep()"
+      (click)="addStep(steps.at(steps.length - 1).get('destinationWaypoint')?.value ?? '')"
+      variant="secondary"
+      tone="accent"
+      type="button"
+    >
+      Add naviagation step
+    </st-button>
+    <st-button (click)="submitRoute()" type="submit" tone="brand"> Save route </st-button>
+  }
+</form>

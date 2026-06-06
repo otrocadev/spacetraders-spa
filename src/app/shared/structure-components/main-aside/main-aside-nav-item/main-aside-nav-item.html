@@ -1,0 +1,16 @@
+<a
+  class="main-aside-nav-item"
+  [routerLink]="itemDetails().route"
+  routerLinkActive="main-aside-nav-item--active"
+  [routerLinkActiveOptions]="{ exact: false }"
+  #rla="routerLinkActive"
+  [attr.aria-current]="rla.isActive ? 'page' : null"
+>
+  <i-tabler-icon class="icon-chip__icon" [name]="itemDetails().icon" />
+  <span class="main-aside-nav-item__name">
+    {{ itemDetails().name }}
+  </span>
+  @if (itemDetails().currentCount !== undefined) {
+    <span class="main-aside-nav-item__count">{{ itemDetails().currentCount }}</span>
+  }
+</a>
