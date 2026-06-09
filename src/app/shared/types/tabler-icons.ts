@@ -1,1 +1,1 @@
-export type TablerIcon = 'rocket' | 'currency-dollar' | 'route';
+export type TablerIcon = 'rocket' | 'currency-dollar' | 'route' | 'users' | 'object-scan';

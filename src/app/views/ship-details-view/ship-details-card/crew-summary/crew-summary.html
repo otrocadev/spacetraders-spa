@@ -1,11 +1,11 @@
 <st-surface>
-  <h3>Crew</h3>
+  <app-icon-title icon="users" title="Crew"></app-icon-title>
   <section class="crew-details">
+    <st-progress label="Morale" [value]="crewDetails().morale" [max]="100" tone="brand" />
     <app-crew-capacity
       [usedCapacity]="crewDetails().current"
       [maxCapacity]="crewDetails().capacity"
       [minimumRequired]="crewDetails().required"
     ></app-crew-capacity>
-    <st-progress label="Morale" [value]="crewDetails().morale" [max]="100" tone="brand" />
   </section>
 </st-surface>

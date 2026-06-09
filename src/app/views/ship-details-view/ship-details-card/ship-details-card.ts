@@ -2,7 +2,6 @@ import { Component, computed, input } from '@angular/core';
 import { ShipDetails, ShipModule, ShipMount } from '../../../core/ship-management/ship-management';
 import { BadgeComponent } from '../../../shared/components/badge/badge';
 import {
-  StProgressComponent,
   StStatComponent,
   StSurfaceComponent,
   StTabComponent,
@@ -36,7 +35,6 @@ const SHIP_FRAME_IMAGES = new Set([
     ShipInfoPanel,
     ShipLoadoutItem,
     ShipSummary,
-    CrewCapacity,
     CrewSummary,
   ],
   templateUrl: './ship-details-card.html',
