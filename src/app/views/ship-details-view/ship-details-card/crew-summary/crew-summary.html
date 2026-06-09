@@ -1,0 +1,11 @@
+<st-surface>
+  <h3>Crew</h3>
+  <section class="crew-details">
+    <app-crew-capacity
+      [usedCapacity]="crewDetails().current"
+      [maxCapacity]="crewDetails().capacity"
+      [minimumRequired]="crewDetails().required"
+    ></app-crew-capacity>
+    <st-progress label="Morale" [value]="crewDetails().morale" [max]="100" tone="brand" />
+  </section>
+</st-surface>

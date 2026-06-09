@@ -1,45 +1,8 @@
 <article class="ship-details-card">
   <section class="ship-details-card__sidebar">
-    <st-surface eyebrow="Ship">
-      <div class="ship-details-card__badges">
-        <app-badge tone="accent">{{ ship().frame.name }}</app-badge>
-        <app-badge tone="neutral">{{ formatLabel(ship().registration.role) }}</app-badge>
-      </div>
+    <app-ship-summary [shipDetails]="ship()" />
 
-      <div class="ship-details-card__summary-stats">
-        @for (metric of summaryMetrics(); track metric.label) {
-          <st-stat [label]="metric.label" [value]="metric.value" [tone]="'neutral'" size="sm" />
-        }
-      </div>
-    </st-surface>
-
-    <st-surface
-      eyebrow="Resources"
-      title="Fuel and cargo"
-      description="Operational capacity for the current trip."
-    >
-      <div class="ship-details-card__progress-list">
-        <st-progress
-          label="Fuel reserves"
-          [value]="ship().fuel.current"
-          [max]="ship().fuel.capacity"
-          tone="brand"
-        />
-        <st-progress
-          label="Cargo load"
-          [value]="ship().cargo.units"
-          [max]="ship().cargo.capacity"
-          tone="accent"
-        />
-      </div>
-    </st-surface>
-
-    <app-ship-info-panel
-      eyebrow="Crew"
-      [title]="ship().crew.rotation"
-      description="Active crew status and morale."
-      [metrics]="crewMetrics()"
-    />
+    <app-crew-summary [crewDetails]="ship().crew" />
   </section>
 
   <section class="ship-details-card__main">

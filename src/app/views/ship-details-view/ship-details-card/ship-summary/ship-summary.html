@@ -1,0 +1,23 @@
+<st-surface>
+  <h3>Ship Summary</h3>
+
+  <div class="ship-details-card__badges">
+    <app-badge tone="accent">{{ shipDetails().frame.name }}</app-badge>
+    <app-badge tone="neutral">{{ shipDetails().registration.role }}</app-badge>
+  </div>
+
+  <div class="ship-details-card__progress-list">
+    <st-progress
+      label="Fuel reserves"
+      [value]="shipDetails().fuel.current"
+      [max]="shipDetails().fuel.capacity"
+      tone="brand"
+    />
+    <st-progress
+      label="Cargo load"
+      [value]="shipDetails().cargo.units"
+      [max]="shipDetails().cargo.capacity"
+      tone="accent"
+    />
+  </div>
+</st-surface>

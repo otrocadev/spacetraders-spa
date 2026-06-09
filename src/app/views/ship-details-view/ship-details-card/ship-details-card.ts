@@ -10,6 +10,9 @@ import {
 } from '@otrocadev/orbital-spacetraders-ds';
 import { ShipInfoPanel, ShipInfoPanelMetric } from './ship-info-panel/ship-info-panel';
 import { ShipLoadoutItem, ShipLoadoutItemMetric } from './ship-loadout-item/index';
+import { ShipSummary } from './ship-summary/ship-summary';
+import { CrewCapacity } from '../../../shared/components/crew-capacity/crew-capacity';
+import { CrewSummary } from './crew-summary/crew-summary';
 
 const SHIP_FRAME_IMAGES = new Set([
   'FRAME_DRONE',
@@ -27,12 +30,14 @@ const SHIP_FRAME_IMAGES = new Set([
   imports: [
     BadgeComponent,
     StSurfaceComponent,
-    StProgressComponent,
     StStatComponent,
     StTabsComponent,
     StTabComponent,
     ShipInfoPanel,
     ShipLoadoutItem,
+    ShipSummary,
+    CrewCapacity,
+    CrewSummary,
   ],
   templateUrl: './ship-details-card.html',
   styleUrl: './ship-details-card.scss',
@@ -53,28 +58,6 @@ export class ShipDetailsCard {
   readonly hasActiveRoute = computed(() => {
     const route = this.ship().nav.route;
     return route.origin.symbol !== route.destination.symbol;
-  });
-
-  readonly summaryMetrics = computed(() => {
-    const ship = this.ship();
-
-    return [
-      { label: 'Faction', value: ship.registration.factionSymbol, tone: 'brand' },
-      { label: 'Role', value: this.formatLabel(ship.registration.role), tone: 'accent' },
-      { label: 'System', value: ship.nav.systemSymbol },
-      { label: 'Waypoint', value: ship.nav.waypointSymbol },
-    ] satisfies ShipInfoPanelMetric[];
-  });
-
-  readonly crewMetrics = computed(() => {
-    const crew = this.ship().crew;
-
-    return [
-      { label: 'Current', value: crew.current, tone: 'brand' },
-      { label: 'Required', value: crew.required },
-      { label: 'Capacity', value: crew.capacity },
-      { label: 'Morale', value: `${crew.morale}%`, tone: 'accent' },
-    ] satisfies ShipInfoPanelMetric[];
   });
 
   readonly frameMetrics = computed(() => {

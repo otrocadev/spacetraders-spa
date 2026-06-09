@@ -6,7 +6,9 @@
   border-radius: 0.6rem;
   background: var(--st-surface-panel);
   border: 1px solid var(--st-border);
-  width: 35rem;
+  width: 100%;
+  min-width: 36rem;
+  max-width: 48rem;
 
   &:hover {
     border-color: var(--st-border-hover);

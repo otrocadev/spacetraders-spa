@@ -1,0 +1,14 @@
+<div class="crew-capacity-progress">
+  <div class="st-progress__header">
+    <span class="st-progress__label">Capacity</span>
+    <span class="st-progress__value">{{ usedLabel }}</span>
+  </div>
+  <div class="st-progress__track">
+    <div class="st-progress__bar" [style.width.%]="usedPercentage"></div>
+
+    <div class="st-progress__marker" [style.left.%]="minimumPercentage - 0.5">
+      <span class="st-progress__marker-arrow">▲</span>
+      <span class="st-progress__marker-text">Required - {{ minimumRequired() }}</span>
+    </div>
+  </div>
+</div>
