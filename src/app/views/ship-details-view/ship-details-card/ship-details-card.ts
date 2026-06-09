@@ -10,7 +10,6 @@ import {
 import { ShipInfoPanel, ShipInfoPanelMetric } from './ship-info-panel/ship-info-panel';
 import { ShipLoadoutItem, ShipLoadoutItemMetric } from './ship-loadout-item/index';
 import { ShipSummary } from './ship-summary/ship-summary';
-import { CrewCapacity } from '../../../shared/components/crew-capacity/crew-capacity';
 import { CrewSummary } from './crew-summary/crew-summary';
 
 const SHIP_FRAME_IMAGES = new Set([

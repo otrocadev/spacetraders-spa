@@ -89,6 +89,8 @@ export type ShipMountSymbol =
   | 'MOUNT_MISSILE_LAUNCHER_I'
   | 'MOUNT_TURRET_I';
 
+export type CrewRotation = 'STRICT' | 'RELAXED';
+
 export interface ShipListAPIResponse {
   data: ShipDetails[];
   meta: {
@@ -146,7 +148,7 @@ export interface ShipCrew {
   current: number;
   required: number;
   capacity: number;
-  rotation: string;
+  rotation: CrewRotation;
   morale: number;
   wages: number;
 }
