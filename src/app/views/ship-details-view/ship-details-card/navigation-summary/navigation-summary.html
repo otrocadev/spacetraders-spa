@@ -1,0 +1,26 @@
+<st-surface>
+  <app-icon-title icon="current-location" title="Navigation"></app-icon-title>
+  <main class="navigation-details">
+    <section class="navigation-details-col-item">
+      <span class="navigation-details-item__title"> Location </span>
+      <span class="navigation-details-item__badges">
+        <article class="navigation-details-item__badge">
+          <i-tabler-icon [name]="'universe'" />
+          <app-badge tone="accent"> X1-GFX</app-badge>
+        </article>
+        <article class="navigation-details-item__badge">
+          <i-tabler-icon [name]="'sparkles'" />
+          <app-badge tone="neutral"> X1-GFX-A1</app-badge>
+        </article>
+      </span>
+    </section>
+    <div class="navigation-details-row-item">
+      <span class="navigation-details-item__title"> Status </span>
+      <span class="navigation-details-item__text">{{ navigationDetails().status }} </span>
+    </div>
+    <div class="navigation-details-row-item">
+      <span class="navigation-details-item__title"> Flight Mode </span>
+      <span class="navigation-details-item__text">{{ navigationDetails().flightMode }} </span>
+    </div>
+  </main>
+</st-surface>

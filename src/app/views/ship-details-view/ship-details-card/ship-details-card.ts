@@ -11,6 +11,7 @@ import { ShipInfoPanel, ShipInfoPanelMetric } from './ship-info-panel/ship-info-
 import { ShipLoadoutItem, ShipLoadoutItemMetric } from './ship-loadout-item/index';
 import { ShipSummary } from './ship-summary/ship-summary';
 import { CrewSummary } from './crew-summary/crew-summary';
+import { NavigationSummary } from './navigation-summary/navigation-summary';
 
 const SHIP_FRAME_IMAGES = new Set([
   'FRAME_DRONE',
@@ -35,6 +36,7 @@ const SHIP_FRAME_IMAGES = new Set([
     ShipLoadoutItem,
     ShipSummary,
     CrewSummary,
+    NavigationSummary,
   ],
   templateUrl: './ship-details-card.html',
   styleUrl: './ship-details-card.scss',

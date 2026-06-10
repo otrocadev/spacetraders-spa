@@ -5,10 +5,16 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { routes } from './app.routes';
 import { provideIcons } from 'ngx-tabler-icons';
 import {
+  IconBarcode,
   IconCurrencyDollar,
+  IconCurrentLocation,
+  IconGridScan,
   IconObjectScan,
   IconRocket,
   IconRoute,
+  IconScan,
+  IconSparkles,
+  IconUniverse,
   IconUsers,
 } from 'ngx-tabler-icons/icons';
 import { apiBaseUrlInterceptor } from './core/http/interceptors/api-base-url.interceptor';
@@ -23,11 +29,17 @@ export const appConfig: ApplicationConfig = {
     ),
     provideRouter(routes),
     provideIcons({
-      IconRocket,
+      IconBarcode,
+      IconCurrentLocation,
       IconCurrencyDollar,
-      IconRoute,
-      IconUsers,
+      IconGridScan,
       IconObjectScan,
+      IconRocket,
+      IconRoute,
+      IconScan,
+      IconSparkles,
+      IconUniverse,
+      IconUsers,
     }),
   ],
 };

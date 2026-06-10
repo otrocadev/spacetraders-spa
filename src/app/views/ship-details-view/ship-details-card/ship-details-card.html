@@ -2,21 +2,15 @@
   <section class="ship-details-card__sidebar">
     <app-ship-summary [shipDetails]="ship()" />
     <app-crew-summary [crewDetails]="ship().crew" />
+    <app-navigation-summary [navigationDetails]="ship().nav" />
   </section>
 
   <section class="ship-details-card__main">
     <st-surface eyebrow="Navigation">
       <div class="ship-details-card__navigation-strip">
         <div class="ship-details-card__navigation-details">
-          <div class="ship-details-card__badges">
-            <app-badge tone="brand">{{ formatLabel(ship().nav.status) }}</app-badge>
-            <app-badge tone="accent">{{ formatLabel(ship().nav.flightMode) }}</app-badge>
-          </div>
-
           <div class="ship-details-card__navigation-metrics">
             <st-stat label="Cooldown" [value]="ship().cooldown.remainingSeconds + ' s'" size="sm" />
-            <st-stat label="System" [value]="ship().nav.systemSymbol" size="sm" />
-            <st-stat label="Waypoint" [value]="ship().nav.waypointSymbol" size="sm" />
           </div>
         </div>
 

@@ -1,0 +1,49 @@
+.navigation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navigation-details-col-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.navigation-details-row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.navigation-details-item__title {
+  color: var(--st-ink-muted);
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.navigation-details-item__text {
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.navigation-details-item__badges {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-details-item__badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
