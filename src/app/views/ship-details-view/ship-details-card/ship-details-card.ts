@@ -1,6 +1,5 @@
 import { Component, computed, input } from '@angular/core';
 import { ShipDetails, ShipModule, ShipMount } from '../../../core/ship-management/ship-management';
-import { BadgeComponent } from '../../../shared/components/badge/badge';
 import {
   StStatComponent,
   StSurfaceComponent,
@@ -13,21 +12,9 @@ import { ShipSummary } from './ship-summary/ship-summary';
 import { CrewSummary } from './crew-summary/crew-summary';
 import { NavigationSummary } from './navigation-summary/navigation-summary';
 
-const SHIP_FRAME_IMAGES = new Set([
-  'FRAME_DRONE',
-  'FRAME_EXPLORER',
-  'FRAME_FIGHTER',
-  'FRAME_FRIGATE',
-  'FRAME_INTERCEPTOR',
-  'FRAME_PROBE',
-  'FRAME_RACER',
-  'FRAME_SHUTTLE',
-]);
-
 @Component({
   selector: 'app-ship-details-card',
   imports: [
-    BadgeComponent,
     StSurfaceComponent,
     StStatComponent,
     StTabsComponent,
@@ -46,11 +33,6 @@ export class ShipDetailsCard {
 
   readonly shipImg = computed(() => {
     const shipFrame = this.ship().frame.symbol;
-
-    if (!SHIP_FRAME_IMAGES.has(shipFrame)) {
-      return null;
-    }
-
     return `assets/img/ship-frames/${shipFrame}.png`;
   });
 

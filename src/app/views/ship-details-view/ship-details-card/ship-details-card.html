@@ -6,74 +6,33 @@
   </section>
 
   <section class="ship-details-card__main">
-    <st-surface eyebrow="Navigation">
-      <div class="ship-details-card__navigation-strip">
-        <div class="ship-details-card__navigation-details">
-          <div class="ship-details-card__navigation-metrics">
-            <st-stat label="Cooldown" [value]="ship().cooldown.remainingSeconds + ' s'" size="sm" />
-          </div>
-        </div>
+    <st-surface>
+      <div class="ship-details-card__image-frame">
+        <img [src]="shipImg()" [alt]="ship().frame.name" />
+        <div class="ship-details-card__systems-grid">
+          <app-ship-info-panel
+            eyebrow="Frame"
+            [title]="ship().frame.name"
+            [description]="ship().frame.description"
+            [metrics]="frameMetrics()"
+          />
 
-        <div class="ship-details-card__image-frame">
-          @if (shipImg(); as imagePath) {
-            <img [src]="imagePath" [alt]="ship().frame.name" />
-          } @else {
-            <div class="ship-details-card__image-fallback">
-              <span>{{ ship().frame.name }}</span>
-              <small>Frame art not available</small>
-            </div>
-          }
+          <app-ship-info-panel
+            eyebrow="Reactor"
+            [title]="ship().reactor.name"
+            [description]="ship().reactor.description"
+            [metrics]="reactorMetrics()"
+          />
 
-          @if (hasActiveRoute()) {
-            <div class="ship-details-card__image-route ship-details-card__route-grid">
-              <st-stat label="Origin" [value]="ship().nav.route.origin.symbol" tone="brand" />
-              <st-stat
-                label="Destination"
-                [value]="ship().nav.route.destination.symbol"
-                tone="accent"
-              />
-            </div>
-            <div
-              class="ship-details-card__image-route ship-details-card__route-grid ship-details-card__route-grid--times"
-            >
-              <st-stat
-                label="Departure"
-                [value]="formatDate(ship().nav.route.departureTime)"
-                size="sm"
-              />
-              <st-stat label="Arrival" [value]="formatDate(ship().nav.route.arrival)" size="sm" />
-            </div>
-          } @else {
-            <p class="ship-details-card__image-route-idle">
-              No active route. The ship is currently idle, docked, or holding position.
-            </p>
-          }
+          <app-ship-info-panel
+            eyebrow="Engine"
+            [title]="ship().engine.name"
+            [description]="ship().engine.description"
+            [metrics]="engineMetrics()"
+          />
         </div>
       </div>
     </st-surface>
-
-    <div class="ship-details-card__systems-grid">
-      <app-ship-info-panel
-        eyebrow="Frame"
-        [title]="ship().frame.name"
-        [description]="ship().frame.description"
-        [metrics]="frameMetrics()"
-      />
-
-      <app-ship-info-panel
-        eyebrow="Reactor"
-        [title]="ship().reactor.name"
-        [description]="ship().reactor.description"
-        [metrics]="reactorMetrics()"
-      />
-
-      <app-ship-info-panel
-        eyebrow="Engine"
-        [title]="ship().engine.name"
-        [description]="ship().engine.description"
-        [metrics]="engineMetrics()"
-      />
-    </div>
   </section>
 
   <section class="ship-details-card__loadout">
