@@ -11,6 +11,7 @@ import { ShipLoadoutItem, ShipLoadoutItemMetric } from './ship-loadout-item/inde
 import { ShipSummary } from './ship-summary/ship-summary';
 import { CrewSummary } from './crew-summary/crew-summary';
 import { NavigationSummary } from './navigation-summary/navigation-summary';
+import { FrameSummary } from './frame-summary/frame-summary';
 
 @Component({
   selector: 'app-ship-details-card',
@@ -24,6 +25,7 @@ import { NavigationSummary } from './navigation-summary/navigation-summary';
     ShipSummary,
     CrewSummary,
     NavigationSummary,
+    FrameSummary,
   ],
   templateUrl: './ship-details-card.html',
   styleUrl: './ship-details-card.scss',

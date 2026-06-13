@@ -1,0 +1,35 @@
+.frame-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.frame-details-item {
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--st-border-subtle, var(--st-border));
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: var(--st-surface-panel-soft);
+
+  &__title {
+    color: var(--st-ink-muted);
+  }
+
+  &__text {
+    font-weight: 400;
+  }
+
+  &__icon {
+    font-size: 0.4rem;
+  }
+}
+
+st-progress {
+  grid-column: 1 / -1;
+  display: block;
+}

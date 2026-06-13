@@ -10,6 +10,8 @@
       <div class="ship-details-card__image-frame">
         <img [src]="shipImg()" [alt]="ship().frame.name" />
         <div class="ship-details-card__systems-grid">
+          <app-frame-summary [frameDetails]="ship().frame" />
+
           <app-ship-info-panel
             eyebrow="Frame"
             [title]="ship().frame.name"

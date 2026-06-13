@@ -1,7 +1,9 @@
 .ship-details-card {
   display: grid;
-  grid-template-columns: 2fr 5fr 3fr;
-  grid-template-areas: 'sidebar main loadout';
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    'sidebar main'
+    'loadout loadout';
   gap: 1rem;
   min-height: 0;
   overflow: visible;
@@ -38,7 +40,7 @@
 
     img {
       width: 100%;
-      max-width: 26rem;
+      max-width: 20rem;
       height: auto;
       object-fit: contain;
     }
