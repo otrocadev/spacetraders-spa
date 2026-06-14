@@ -20,6 +20,10 @@ import {
   IconSparkles,
   IconUniverse,
   IconUsers,
+  IconGauge,
+  IconBolt,
+  IconCarTurbine,
+  IconEngine,
 } from 'ngx-tabler-icons/icons';
 import { apiBaseUrlInterceptor } from './core/http/interceptors/api-base-url.interceptor';
 import { authInterceptor } from './core/http/interceptors/auth.interceptor';
@@ -36,9 +40,13 @@ export const appConfig: ApplicationConfig = {
       IconAugmentedReality,
       IconBarcode,
       IconBlocks,
+      IconBolt,
+      IconCarTurbine,
       IconCurrentLocation,
       IconCurrencyDollar,
+      IconEngine,
       IconGasStation,
+      IconGauge,
       IconGridScan,
       IconObjectScan,
       IconRocket,

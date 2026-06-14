@@ -1,9 +1,13 @@
 export type TablerIcon =
   | 'augmented-reality'
   | 'barcode'
+  | 'bolt'
+  | 'car-turbine'
   | 'current-location'
   | 'currency-dollar'
+  | 'engine'
   | 'gas-station'
+  | 'gauge'
   | 'grid-scan'
   | 'object-scan'
   | 'rocket'

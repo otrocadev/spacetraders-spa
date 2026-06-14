@@ -19,5 +19,24 @@
       [max]="shipDetails().cargo.capacity"
       tone="accent"
     />
+
+    <app-hover-details-panel
+      title="Power usage"
+      subtitle="Frame, engine, modules and mounts"
+      [items]="powerBreakdown()"
+    >
+      <div class="power-usage-panel">
+        <st-progress
+          label="Power usage"
+          [value]="powerRequirement()"
+          [max]="shipDetails().reactor.powerOutput"
+          tone="brand"
+        />
+        <p class="ship-summary__power-note">
+          Reactor output: {{ shipDetails().reactor.powerOutput }} PWR ·
+          {{ powerBalance() >= 0 ? 'Remaining' : 'Shortfall' }} {{ powerBalance() }} PWR
+        </p>
+      </div>
+    </app-hover-details-panel>
   </div>
 </st-surface>

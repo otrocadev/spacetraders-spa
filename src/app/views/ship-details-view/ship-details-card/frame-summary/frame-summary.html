@@ -5,23 +5,38 @@
   ></app-icon-title>
 
   <main class="frame-details">
-    <div class="frame-details-item" [appTooltip]="'Module slots'">
-      <i-tabler-icon [name]="'blocks'" />
-      <span class="frame-details-item__text">{{ frameDetails().moduleSlots }}</span>
-    </div>
+    <section class="frame-details__group">
+      <h4 class="frame-details__label">Specs</h4>
+      <div class="frame-details-item" [appTooltip]="'Module slots'">
+        <i-tabler-icon [name]="'blocks'" />
+        <span class="frame-details-item__text">{{ frameDetails().moduleSlots }}</span>
+      </div>
 
-    <div class="frame-details-item" [appTooltip]="'Mounting points'">
-      <i-tabler-icon [name]="'augmented-reality'" />
-      <span class="frame-details-item__text">{{ frameDetails().mountingPoints }}</span>
-    </div>
+      <div class="frame-details-item" [appTooltip]="'Mounting points'">
+        <i-tabler-icon [name]="'augmented-reality'" />
+        <span class="frame-details-item__text">{{ frameDetails().mountingPoints }}</span>
+      </div>
 
-    <div class="frame-details-item" [appTooltip]="'Fuel capacity'">
-      <span class="frame-details-item__icon">
-        <i-tabler-icon [name]="'gas-station'" />
-        max
-      </span>
-      <span class="frame-details-item__text">{{ frameDetails().fuelCapacity }}</span>
-    </div>
+      <div class="frame-details-item" [appTooltip]="'Fuel capacity'">
+        <span class="frame-details-item__icon">
+          <i-tabler-icon [name]="'gas-station'" />
+          max
+        </span>
+        <span class="frame-details-item__text">{{ frameDetails().fuelCapacity }}</span>
+      </div>
+    </section>
+
+    <section class="frame-details__group">
+      <h4 class="frame-details__label">Requirements</h4>
+      <div class="frame-details-item" [appTooltip]="'Frame power requirement'">
+        <i-tabler-icon [name]="'bolt'" />
+        <span class="frame-details-item__text">{{ frameDetails().requirements.power }}</span>
+      </div>
+      <div class="frame-details-item" [appTooltip]="'Frame crew requirement'">
+        <i-tabler-icon [name]="'users'" />
+        <span class="frame-details-item__text">{{ frameDetails().requirements.crew }}</span>
+      </div>
+    </section>
 
     <st-progress label="Condition" [value]="frameCondition()" [max]="100" tone="brand" />
     <st-progress label="Integrity" [value]="frameIntegrity()" [max]="100" tone="accent" />

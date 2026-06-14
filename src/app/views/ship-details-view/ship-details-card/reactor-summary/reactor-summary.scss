@@ -1,17 +1,17 @@
-.frame-details {
+.reactor-details {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.frame-details__group {
+.reactor-details__group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
   align-items: start;
 }
 
-.frame-details__label {
+.reactor-details__label {
   grid-column: 1 / -1;
   margin: 0;
   font-size: 0.78rem;
@@ -20,7 +20,7 @@
   color: var(--st-ink-muted);
 }
 
-.frame-details-item {
+.reactor-details-item {
   font-weight: 650;
   letter-spacing: 0.06em;
   text-transform: uppercase;

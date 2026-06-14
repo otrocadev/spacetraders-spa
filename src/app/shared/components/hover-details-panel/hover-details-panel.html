@@ -1,0 +1,26 @@
+<div class="hover-details-trigger" #trigger>
+  <ng-content />
+</div>
+
+@if (isOpen()) {
+  <aside class="hover-details-panel" [ngStyle]="getPopoverStyles()">
+    <header class="hover-details-panel__header">
+      <strong>{{ title() }}</strong>
+      @if (subtitle()) {
+        <span>{{ subtitle() }}</span>
+      }
+    </header>
+
+    <ul class="hover-details-panel__list">
+      @for (item of items(); track item.label + '-' + item.detail) {
+        <li class="hover-details-panel__item">
+          <span class="hover-details-panel__item-label">{{ item.label }}</span>
+          <span class="hover-details-panel__item-detail">{{ item.detail }}</span>
+          @if (item.value !== undefined) {
+            <strong class="hover-details-panel__item-value">{{ item.value }}</strong>
+          }
+        </li>
+      }
+    </ul>
+  </aside>
+}

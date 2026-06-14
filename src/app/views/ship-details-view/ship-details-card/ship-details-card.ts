@@ -5,12 +5,13 @@ import {
   StTabComponent,
   StTabsComponent,
 } from '@otrocadev/orbital-spacetraders-ds';
-import { ShipInfoPanel, ShipInfoPanelMetric } from './ship-info-panel/ship-info-panel';
 import { ShipLoadoutItem, ShipLoadoutItemMetric } from './ship-loadout-item/index';
 import { ShipSummary } from './ship-summary/ship-summary';
 import { CrewSummary } from './crew-summary/crew-summary';
 import { NavigationSummary } from './navigation-summary/navigation-summary';
 import { FrameSummary } from './frame-summary/frame-summary';
+import { EngineSummary } from './engine-summary/engine-summary';
+import { ReactorSummary } from './reactor-summary/reactor-summary';
 
 @Component({
   selector: 'app-ship-details-card',
@@ -18,12 +19,13 @@ import { FrameSummary } from './frame-summary/frame-summary';
     StSurfaceComponent,
     StTabsComponent,
     StTabComponent,
-    ShipInfoPanel,
     ShipLoadoutItem,
     ShipSummary,
     CrewSummary,
     NavigationSummary,
     FrameSummary,
+    EngineSummary,
+    ReactorSummary,
   ],
   templateUrl: './ship-details-card.html',
   styleUrl: './ship-details-card.scss',
@@ -39,39 +41,6 @@ export class ShipDetailsCard {
   readonly hasActiveRoute = computed(() => {
     const route = this.ship().nav.route;
     return route.origin.symbol !== route.destination.symbol;
-  });
-
-  readonly frameMetrics = computed(() => {
-    const frame = this.ship().frame;
-
-    return [
-      { label: 'Modules', value: frame.moduleSlots, tone: 'brand' },
-      { label: 'Mounts', value: frame.mountingPoints },
-      { label: 'Power', value: frame.requirements.power },
-      { label: 'Crew', value: frame.requirements.crew },
-    ] satisfies ShipInfoPanelMetric[];
-  });
-
-  readonly reactorMetrics = computed(() => {
-    const reactor = this.ship().reactor;
-
-    return [
-      { label: 'Output', value: reactor.powerOutput, tone: 'brand' },
-      { label: 'Crew', value: reactor.requirements.crew },
-      { label: 'Condition', value: this.asPercent(reactor.condition) },
-      { label: 'Integrity', value: this.asPercent(reactor.integrity), tone: 'accent' },
-    ] satisfies ShipInfoPanelMetric[];
-  });
-
-  readonly engineMetrics = computed(() => {
-    const engine = this.ship().engine;
-
-    return [
-      { label: 'Speed', value: engine.speed, tone: 'brand' },
-      { label: 'Power', value: engine.requirements.power },
-      { label: 'Crew', value: engine.requirements.crew },
-      { label: 'Condition', value: this.asPercent(engine.condition), tone: 'accent' },
-    ] satisfies ShipInfoPanelMetric[];
   });
 
   readonly moduleItems = computed(() => {
