@@ -16,6 +16,9 @@
 
 .ship-details-card__sidebar {
   grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .ship-details-card__main {
@@ -34,6 +37,10 @@
     border-radius: 1rem;
     background: var(--st-surface-panel-soft);
     width: fit-content;
+
+    @media (max-width: 1265px) {
+      grid-template-columns: 1fr;
+    }
 
     img {
       width: 100%;
