@@ -8,6 +8,21 @@
   --app-scrollbar-thumb-hover: rgba(104, 154, 233, 0.75);
 }
 
+.app-tooltip {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  max-width: 18rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.5rem;
+  background: var(--st-surface-panel, #111827);
+  color: var(--st-ink, #ffffff);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -100%);
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--app-scrollbar-thumb) var(--app-scrollbar-track);

@@ -13,13 +13,6 @@
           <app-frame-summary [frameDetails]="ship().frame" />
 
           <app-ship-info-panel
-            eyebrow="Frame"
-            [title]="ship().frame.name"
-            [description]="ship().frame.description"
-            [metrics]="frameMetrics()"
-          />
-
-          <app-ship-info-panel
             eyebrow="Reactor"
             [title]="ship().reactor.name"
             [description]="ship().reactor.description"

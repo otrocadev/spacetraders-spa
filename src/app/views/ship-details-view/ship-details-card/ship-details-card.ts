@@ -1,7 +1,6 @@
 import { Component, computed, input } from '@angular/core';
 import { ShipDetails, ShipModule, ShipMount } from '../../../core/ship-management/ship-management';
 import {
-  StStatComponent,
   StSurfaceComponent,
   StTabComponent,
   StTabsComponent,
@@ -17,7 +16,6 @@ import { FrameSummary } from './frame-summary/frame-summary';
   selector: 'app-ship-details-card',
   imports: [
     StSurfaceComponent,
-    StStatComponent,
     StTabsComponent,
     StTabComponent,
     ShipInfoPanel,

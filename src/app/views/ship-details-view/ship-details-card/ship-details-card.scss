@@ -29,7 +29,7 @@
 
   .ship-details-card__image-frame {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 4fr 3fr;
     place-items: center;
     align-content: start;
     min-height: 13rem;
@@ -40,7 +40,6 @@
 
     img {
       width: 100%;
-      max-width: 20rem;
       height: auto;
       object-fit: contain;
     }

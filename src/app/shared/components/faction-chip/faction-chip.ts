@@ -1,11 +1,10 @@
 import { Component, computed, input } from '@angular/core';
-import { StSurfaceComponent } from '@otrocadev/orbital-spacetraders-ds';
 import { FactionNamePipe } from '../../pipes/faction-name.pipe';
 import { FactionSymbol } from '../../../core/faction-management/faction-management';
 
 @Component({
   selector: 'app-faction-chip',
-  imports: [FactionNamePipe, StSurfaceComponent],
+  imports: [FactionNamePipe],
   templateUrl: './faction-chip.html',
   styleUrl: './faction-chip.scss',
 })

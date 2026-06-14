@@ -1,28 +1,26 @@
 <st-surface>
-  <app-icon-title icon="rocket" title="{{ frameDetails().name }}"></app-icon-title>
+  <app-icon-title
+    icon="rocket"
+    title="{{ frameDetails().name + ' - Quality: ' + frameDetails().quality }}"
+  ></app-icon-title>
 
   <main class="frame-details">
-    <div class="frame-details-item">
+    <div class="frame-details-item" [appTooltip]="'Module slots'">
       <i-tabler-icon [name]="'blocks'" />
       <span class="frame-details-item__text">{{ frameDetails().moduleSlots }}</span>
     </div>
 
-    <div class="frame-details-item">
+    <div class="frame-details-item" [appTooltip]="'Mounting points'">
       <i-tabler-icon [name]="'augmented-reality'" />
       <span class="frame-details-item__text">{{ frameDetails().mountingPoints }}</span>
     </div>
 
-    <div class="frame-details-item">
+    <div class="frame-details-item" [appTooltip]="'Fuel capacity'">
       <span class="frame-details-item__icon">
         <i-tabler-icon [name]="'gas-station'" />
         max
       </span>
       <span class="frame-details-item__text">{{ frameDetails().fuelCapacity }}</span>
-    </div>
-
-    <div class="frame-details-item">
-      <i-tabler-icon [name]="'star'" />
-      <span class="frame-details-item__text">{{ frameDetails().quality }}</span>
     </div>
 
     <st-progress label="Condition" [value]="frameCondition()" [max]="100" tone="brand" />
