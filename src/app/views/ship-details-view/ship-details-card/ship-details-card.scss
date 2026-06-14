@@ -1,9 +1,6 @@
 .ship-details-card {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas:
-    'sidebar main'
-    'loadout loadout';
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   min-height: 0;
   overflow: visible;
@@ -29,17 +26,18 @@
 
   .ship-details-card__image-frame {
     display: grid;
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 1fr 1fr;
     place-items: center;
-    align-content: start;
-    min-height: 13rem;
+    gap: 1rem;
     padding: 1rem;
     border: 1px solid var(--st-border-subtle, var(--st-border));
     border-radius: 1rem;
     background: var(--st-surface-panel-soft);
+    width: fit-content;
 
     img {
       width: 100%;
+      max-width: 24rem;
       height: auto;
       object-fit: contain;
     }

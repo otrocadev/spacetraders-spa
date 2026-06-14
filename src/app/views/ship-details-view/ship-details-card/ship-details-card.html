@@ -9,11 +9,9 @@
     <st-surface>
       <div class="ship-details-card__image-frame">
         <img [src]="shipImg()" [alt]="ship().frame.name" />
-        <div class="ship-details-card__systems-grid">
-          <app-frame-summary [frameDetails]="ship().frame" />
-          <app-reactor-summary [reactorDetails]="ship().reactor" />
-          <app-engine-summary [engineDetails]="ship().engine" />
-        </div>
+        <app-frame-summary [frameDetails]="ship().frame" />
+        <app-reactor-summary [reactorDetails]="ship().reactor" />
+        <app-engine-summary [engineDetails]="ship().engine" />
       </div>
     </st-surface>
   </section>
