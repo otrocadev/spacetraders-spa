@@ -36,25 +36,33 @@
 
 .ship-details-card__main {
   grid-area: main;
-  min-width: 0;
-  display: flex;
-  width: 100%;
   gap: 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--st-border-subtle, var(--st-border));
+  border-radius: 1rem;
+  background: var(--st-surface-panel-soft);
+  height: fit-content;
+
+  @media (min-width: 1250px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   .ship-details-card__image-frame {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    border: 1px solid var(--st-border-subtle, var(--st-border));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--st-accent);
     border-radius: 1rem;
-    background: var(--st-surface-panel-soft);
     width: 100%;
-
-    @media (min-width: 1250px) {
-      grid-template-columns: 1fr 1fr;
-    }
+    height: 100%;
+    max-height: 20rem;
+    background-image: url('/assets/img/hangar.png');
+    background-size: cover;
+    background-position: center;
 
     img {
       width: 100%;
