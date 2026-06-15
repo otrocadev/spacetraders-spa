@@ -1,45 +1,59 @@
 .ship-details-card {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 1rem;
   min-height: 0;
   overflow: visible;
-  align-items: start;
   padding-top: 1rem;
+  grid-template-areas: 'summary' 'main' 'loadout';
+
+  @media (min-width: 1570px) {
+    grid-template-areas: 'summary main' 'loadout loadout';
+  }
+  @media (min-width: 2000px) {
+    grid-template-areas: 'summary main loadout';
+  }
 }
 
-.ship-details-card__sidebar,
-.ship-details-card__loadout {
+.ship-details-card__summary {
+  grid-area: summary;
   display: grid;
-  gap: 0.75rem;
-}
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-content: start;
 
-.ship-details-card__sidebar {
-  grid-area: sidebar;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  @media (min-width: 850px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1250px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1570px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .ship-details-card__main {
   grid-area: main;
   min-width: 0;
-  display: grid;
+  display: flex;
+  width: 100%;
   gap: 0.75rem;
 
   .ship-details-card__image-frame {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     place-items: center;
     gap: 1rem;
     padding: 1rem;
     border: 1px solid var(--st-border-subtle, var(--st-border));
     border-radius: 1rem;
     background: var(--st-surface-panel-soft);
-    width: fit-content;
+    width: 100%;
 
-    @media (max-width: 1265px) {
-      grid-template-columns: 1fr;
+    @media (min-width: 1250px) {
+      grid-template-columns: 1fr 1fr;
     }
 
     img {
@@ -47,12 +61,6 @@
       max-width: 24rem;
       height: auto;
       object-fit: contain;
-    }
-
-    .ship-details-card__systems-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
     }
   }
 }
@@ -76,68 +84,4 @@
 
 .ship-details-card__tab-content {
   overflow-x: hidden;
-}
-
-.ship-details-card__badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.ship-details-card__summary-stats,
-.ship-details-card__route-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-  gap: 0.75rem;
-}
-
-.ship-details-card__route-grid--times {
-  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-}
-
-.ship-details-card__navigation-strip {
-  display: grid;
-  grid-template-columns: minmax(14rem, 0.95fr) minmax(22rem, 1.85fr);
-  gap: 0.75rem;
-  align-items: stretch;
-}
-
-.ship-details-card__navigation-details {
-  display: grid;
-  gap: 0.75rem;
-  align-content: start;
-}
-
-.ship-details-card__navigation-metrics {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
-}
-
-.ship-details-card__image-fallback {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  min-height: 12rem;
-  width: 100%;
-  color: var(--st-text-muted);
-  text-align: center;
-}
-
-.ship-details-card__image-route {
-  width: 100%;
-  margin-top: 0.75rem;
-}
-
-.ship-details-card__image-route-idle {
-  width: 100%;
-  margin: 0.75rem 0 0;
-  padding: 0.75rem;
-  border: 1px solid var(--st-border-subtle, var(--st-border));
-  border-radius: 0.75rem;
-  background: var(--st-surface-panel-soft);
-  color: var(--st-text-muted);
 }

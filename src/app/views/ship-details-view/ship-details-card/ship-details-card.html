@@ -1,12 +1,15 @@
 <article class="ship-details-card">
-  <section class="ship-details-card__sidebar">
-    <app-ship-summary [shipDetails]="ship()" />
-    <app-crew-summary [crewDetails]="ship().crew" />
-    <app-navigation-summary [navigationDetails]="ship().nav" />
+  <section class="ship-details-card__summary">
+    <app-ship-summary class="ship-details-card__summary-element" [shipDetails]="ship()" />
+    <app-crew-summary class="ship-details-card__summary-element" [crewDetails]="ship().crew" />
+    <app-navigation-summary
+      class="ship-details-card__summary-element"
+      [navigationDetails]="ship().nav"
+    />
   </section>
 
-  <section class="ship-details-card__main">
-    <st-surface>
+  <section>
+    <st-surface class="ship-details-card__main">
       <div class="ship-details-card__image-frame">
         <img [src]="shipImg()" [alt]="ship().frame.name" />
         <app-frame-summary [frameDetails]="ship().frame" />
