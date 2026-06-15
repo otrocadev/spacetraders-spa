@@ -1,0 +1,18 @@
+<st-surface>
+  <app-icon-title [icon]="icon()" [title]="title()" />
+
+  <main class="ship-component-card">
+    <section class="ship-component-card__group">
+      <h4 class="ship-component-card__label">Specs</h4>
+      <ng-content select="[specs]" />
+    </section>
+
+    <section class="ship-component-card__group">
+      <h4 class="ship-component-card__label">Requirements</h4>
+      <ng-content select="[requirements]" />
+    </section>
+
+    <st-progress label="Condition" [value]="condition()" [max]="100" tone="brand" />
+    <st-progress label="Integrity" [value]="integrity()" [max]="100" tone="accent" />
+  </main>
+</st-surface>

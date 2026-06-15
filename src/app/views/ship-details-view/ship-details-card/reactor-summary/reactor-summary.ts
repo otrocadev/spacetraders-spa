@@ -1,19 +1,12 @@
 import { Component, computed, input } from '@angular/core';
-import { StSurfaceComponent, StProgressComponent } from '@otrocadev/orbital-spacetraders-ds';
-import { IconTitleComponent } from '../../../../shared/directives/icon-title/icon-title.directive';
+import { ShipComponentCard } from '../ship-component-card/ship-component-card';
 import { TooltipDirective } from '../../../../shared/directives/tooltip/tooltip.directive';
 import { ShipReactor } from '../../../../core/ship-management/ship-management';
 import { ITablerIcon } from 'ngx-tabler-icons';
 
 @Component({
   selector: 'app-reactor-summary',
-  imports: [
-    StSurfaceComponent,
-    StProgressComponent,
-    IconTitleComponent,
-    TooltipDirective,
-    ITablerIcon,
-  ],
+  imports: [ShipComponentCard, TooltipDirective, ITablerIcon],
   templateUrl: './reactor-summary.html',
   styleUrl: './reactor-summary.scss',
 })

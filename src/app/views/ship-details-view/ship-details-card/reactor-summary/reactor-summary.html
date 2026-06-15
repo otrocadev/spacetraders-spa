@@ -1,27 +1,16 @@
-<st-surface>
-  <app-icon-title
-    icon="engine"
-    title="{{ reactorDetails().name + ' - Quality: ' + reactorDetails().quality }}"
-  ></app-icon-title>
+<app-ship-component-card
+  [icon]="'engine'"
+  [title]="reactorDetails().name + ' - Quality: ' + reactorDetails().quality"
+  [condition]="reactorCondition()"
+  [integrity]="reactorIntegrity()"
+>
+  <div specs class="component-item" [appTooltip]="'Reactor power output'">
+    <i-tabler-icon [name]="'bolt'" />
+    <span class="component-item__text">{{ reactorDetails().powerOutput }}</span>
+  </div>
 
-  <main class="reactor-details">
-    <section class="reactor-details__group">
-      <h4 class="reactor-details__label">Specs</h4>
-      <div class="reactor-details-item" [appTooltip]="'Reactor power output'">
-        <i-tabler-icon [name]="'bolt'" />
-        <span class="reactor-details-item__text">{{ reactorDetails().powerOutput }}</span>
-      </div>
-    </section>
-
-    <section class="reactor-details__group">
-      <h4 class="reactor-details__label">Requirements</h4>
-      <div class="reactor-details-item" [appTooltip]="'Crew required to operate the reactor'">
-        <i-tabler-icon [name]="'users'" />
-        <span class="reactor-details-item__text">{{ reactorDetails().requirements.crew }}</span>
-      </div>
-    </section>
-
-    <st-progress label="Condition" [value]="reactorCondition()" [max]="100" tone="brand" />
-    <st-progress label="Integrity" [value]="reactorIntegrity()" [max]="100" tone="accent" />
-  </main>
-</st-surface>
+  <div requirements class="component-item" [appTooltip]="'Crew required to operate the reactor'">
+    <i-tabler-icon [name]="'users'" />
+    <span class="component-item__text">{{ reactorDetails().requirements.crew }}</span>
+  </div>
+</app-ship-component-card>
