@@ -1,0 +1,19 @@
+<st-surface>
+  <app-icon-title icon="users" title="Crew"></app-icon-title>
+  <main class="crew-details">
+    <div class="crew-details-item">
+      <span class="crew-details-item__title"> Rotation </span>
+      <span class="crew-details-item__text">{{ crewDetails().rotation }} </span>
+    </div>
+    <div class="crew-details-item">
+      <span class="crew-details-item__title"> Wages </span>
+      <span class="crew-details-item__text">{{ crewDetails().wages | credits }} </span>
+    </div>
+    <st-progress label="Morale" [value]="crewDetails().morale" [max]="100" tone="brand" />
+    <app-crew-capacity
+      [usedCapacity]="crewDetails().current"
+      [maxCapacity]="crewDetails().capacity"
+      [minimumRequired]="crewDetails().required"
+    ></app-crew-capacity>
+  </main>
+</st-surface>

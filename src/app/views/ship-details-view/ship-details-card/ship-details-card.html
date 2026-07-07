@@ -1,123 +1,20 @@
 <article class="ship-details-card">
-  <section class="ship-details-card__sidebar">
-    <st-surface eyebrow="Ship">
-      <div class="ship-details-card__badges">
-        <app-badge tone="accent">{{ ship().frame.name }}</app-badge>
-        <app-badge tone="neutral">{{ formatLabel(ship().registration.role) }}</app-badge>
-      </div>
-
-      <div class="ship-details-card__summary-stats">
-        @for (metric of summaryMetrics(); track metric.label) {
-          <st-stat [label]="metric.label" [value]="metric.value" [tone]="'neutral'" size="sm" />
-        }
-      </div>
-    </st-surface>
-
-    <st-surface
-      eyebrow="Resources"
-      title="Fuel and cargo"
-      description="Operational capacity for the current trip."
-    >
-      <div class="ship-details-card__progress-list">
-        <st-progress
-          label="Fuel reserves"
-          [value]="ship().fuel.current"
-          [max]="ship().fuel.capacity"
-          tone="brand"
-        />
-        <st-progress
-          label="Cargo load"
-          [value]="ship().cargo.units"
-          [max]="ship().cargo.capacity"
-          tone="accent"
-        />
-      </div>
-    </st-surface>
-
-    <app-ship-info-panel
-      eyebrow="Crew"
-      [title]="ship().crew.rotation"
-      description="Active crew status and morale."
-      [metrics]="crewMetrics()"
+  <section class="ship-details-card__summary">
+    <app-ship-summary class="ship-details-card__summary-element" [shipDetails]="ship()" />
+    <app-crew-summary class="ship-details-card__summary-element" [crewDetails]="ship().crew" />
+    <app-navigation-summary
+      class="ship-details-card__summary-element"
+      [navigationDetails]="ship().nav"
     />
   </section>
 
   <section class="ship-details-card__main">
-    <st-surface eyebrow="Navigation">
-      <div class="ship-details-card__navigation-strip">
-        <div class="ship-details-card__navigation-details">
-          <div class="ship-details-card__badges">
-            <app-badge tone="brand">{{ formatLabel(ship().nav.status) }}</app-badge>
-            <app-badge tone="accent">{{ formatLabel(ship().nav.flightMode) }}</app-badge>
-          </div>
-
-          <div class="ship-details-card__navigation-metrics">
-            <st-stat label="Cooldown" [value]="ship().cooldown.remainingSeconds + ' s'" size="sm" />
-            <st-stat label="System" [value]="ship().nav.systemSymbol" size="sm" />
-            <st-stat label="Waypoint" [value]="ship().nav.waypointSymbol" size="sm" />
-          </div>
-        </div>
-
-        <div class="ship-details-card__image-frame">
-          @if (shipImg(); as imagePath) {
-            <img [src]="imagePath" [alt]="ship().frame.name" />
-          } @else {
-            <div class="ship-details-card__image-fallback">
-              <span>{{ ship().frame.name }}</span>
-              <small>Frame art not available</small>
-            </div>
-          }
-
-          @if (hasActiveRoute()) {
-            <div class="ship-details-card__image-route ship-details-card__route-grid">
-              <st-stat label="Origin" [value]="ship().nav.route.origin.symbol" tone="brand" />
-              <st-stat
-                label="Destination"
-                [value]="ship().nav.route.destination.symbol"
-                tone="accent"
-              />
-            </div>
-            <div
-              class="ship-details-card__image-route ship-details-card__route-grid ship-details-card__route-grid--times"
-            >
-              <st-stat
-                label="Departure"
-                [value]="formatDate(ship().nav.route.departureTime)"
-                size="sm"
-              />
-              <st-stat label="Arrival" [value]="formatDate(ship().nav.route.arrival)" size="sm" />
-            </div>
-          } @else {
-            <p class="ship-details-card__image-route-idle">
-              No active route. The ship is currently idle, docked, or holding position.
-            </p>
-          }
-        </div>
-      </div>
-    </st-surface>
-
-    <div class="ship-details-card__systems-grid">
-      <app-ship-info-panel
-        eyebrow="Frame"
-        [title]="ship().frame.name"
-        [description]="ship().frame.description"
-        [metrics]="frameMetrics()"
-      />
-
-      <app-ship-info-panel
-        eyebrow="Reactor"
-        [title]="ship().reactor.name"
-        [description]="ship().reactor.description"
-        [metrics]="reactorMetrics()"
-      />
-
-      <app-ship-info-panel
-        eyebrow="Engine"
-        [title]="ship().engine.name"
-        [description]="ship().engine.description"
-        [metrics]="engineMetrics()"
-      />
+    <div class="ship-details-card__image-frame">
+      <img [src]="shipImg()" [alt]="ship().frame.name" />
     </div>
+    <app-frame-summary [frameDetails]="ship().frame" />
+    <app-reactor-summary [reactorDetails]="ship().reactor" />
+    <app-engine-summary [engineDetails]="ship().engine" />
   </section>
 
   <section class="ship-details-card__loadout">

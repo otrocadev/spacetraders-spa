@@ -1,0 +1,20 @@
+<app-ship-component-card
+  [icon]="'car-turbine'"
+  [title]="engineDetails().name + ' - Quality: ' + engineDetails().quality"
+  [condition]="engineCondition()"
+  [integrity]="engineIntegrity()"
+>
+  <div specs class="component-item" [appTooltip]="'Engine speed'">
+    <i-tabler-icon [name]="'gauge'" />
+    <span class="component-item__text">{{ engineDetails().speed }}</span>
+  </div>
+
+  <div requirements class="component-item" [appTooltip]="'Engine power requirement'">
+    <i-tabler-icon [name]="'bolt'" />
+    <span class="component-item__text">{{ engineDetails().requirements.power }}</span>
+  </div>
+  <div requirements class="component-item" [appTooltip]="'Crew required to operate the engine'">
+    <i-tabler-icon [name]="'users'" />
+    <span class="component-item__text">{{ engineDetails().requirements.crew }}</span>
+  </div>
+</app-ship-component-card>

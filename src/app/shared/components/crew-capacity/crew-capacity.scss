@@ -1,0 +1,72 @@
+.crew-capacity-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding-bottom: 1rem;
+}
+
+.st-progress__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.st-progress__label {
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--st-ink-muted);
+}
+
+.st-progress__value {
+  color: var(--st-ink-strong);
+  font-variant-numeric: tabular-nums;
+}
+
+.st-progress__track {
+  position: relative;
+  width: 100%;
+  height: 0.45rem;
+  background: color-mix(in srgb, var(--st-panel) 70%, var(--st-canvas));
+  border-radius: 0.3rem;
+  overflow: visible;
+}
+
+.st-progress__bar {
+  position: absolute;
+  inset-left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.3rem;
+  transition: width 280ms ease;
+  background: linear-gradient(
+    90deg,
+    var(--st-brand),
+    color-mix(in srgb, var(--st-brand) 72%, white)
+  );
+}
+
+.st-progress__marker {
+  position: absolute;
+  top: calc(100% + 0.2rem);
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.st-progress__marker-arrow {
+  display: block;
+  font-size: 0.58rem;
+  line-height: 1;
+  color: var(--st-accent);
+}
+
+.st-progress__marker-text {
+  display: block;
+  margin-top: 0.08rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--st-ink-muted);
+}

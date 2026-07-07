@@ -1,0 +1,42 @@
+<st-surface>
+  <app-icon-title icon="grid-scan" title="Ship summary"></app-icon-title>
+
+  <div class="ship-details-card__badges">
+    <app-badge tone="accent">{{ shipDetails().frame.name }}</app-badge>
+    <app-badge tone="neutral">{{ shipDetails().registration.role }}</app-badge>
+  </div>
+
+  <div class="ship-details-card__progress-list">
+    <st-progress
+      label="Fuel reserves"
+      [value]="shipDetails().fuel.current"
+      [max]="shipDetails().fuel.capacity"
+      tone="brand"
+    />
+    <st-progress
+      label="Cargo load"
+      [value]="shipDetails().cargo.units"
+      [max]="shipDetails().cargo.capacity"
+      tone="accent"
+    />
+
+    <app-hover-details-panel
+      title="Power usage"
+      subtitle="Frame, engine, modules and mounts"
+      [items]="powerBreakdown()"
+    >
+      <div class="power-usage-panel">
+        <st-progress
+          label="Power usage"
+          [value]="powerRequirement()"
+          [max]="shipDetails().reactor.powerOutput"
+          tone="brand"
+        />
+        <p class="ship-summary__power-note">
+          Reactor output: {{ shipDetails().reactor.powerOutput }} PWR ·
+          {{ powerBalance() >= 0 ? 'Remaining' : 'Shortfall' }} {{ powerBalance() }} PWR
+        </p>
+      </div>
+    </app-hover-details-panel>
+  </div>
+</st-surface>

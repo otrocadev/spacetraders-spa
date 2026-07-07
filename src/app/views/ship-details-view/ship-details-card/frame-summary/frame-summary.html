@@ -1,0 +1,31 @@
+<app-ship-component-card
+  [icon]="'rocket'"
+  [title]="frameDetails().name + ' - Quality: ' + frameDetails().quality"
+  [condition]="frameCondition()"
+  [integrity]="frameIntegrity()"
+>
+  <div specs class="component-item" [appTooltip]="'Module slots'">
+    <i-tabler-icon [name]="'blocks'" />
+    <span class="component-item__text">{{ frameDetails().moduleSlots }}</span>
+  </div>
+  <div specs class="component-item" [appTooltip]="'Mounting points'">
+    <i-tabler-icon [name]="'augmented-reality'" />
+    <span class="component-item__text">{{ frameDetails().mountingPoints }}</span>
+  </div>
+  <div specs class="component-item" [appTooltip]="'Fuel capacity'">
+    <span class="component-item__icon">
+      <i-tabler-icon [name]="'gas-station'" />
+      max
+    </span>
+    <span class="component-item__text">{{ frameDetails().fuelCapacity }}</span>
+  </div>
+
+  <div requirements class="component-item" [appTooltip]="'Frame power requirement'">
+    <i-tabler-icon [name]="'bolt'" />
+    <span class="component-item__text">{{ frameDetails().requirements.power }}</span>
+  </div>
+  <div requirements class="component-item" [appTooltip]="'Frame crew requirement'">
+    <i-tabler-icon [name]="'users'" />
+    <span class="component-item__text">{{ frameDetails().requirements.crew }}</span>
+  </div>
+</app-ship-component-card>

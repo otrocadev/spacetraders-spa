@@ -1,16 +1,14 @@
-<st-surface tone="accent">
-  @if (faction() === 'loading') {
-    <div class="faction-chip faction-chip--no-faction">Loading...</div>
-  } @else if (faction()) {
-    <div class="faction-chip">
-      <img
-        [src]="'assets/img/faction-emblems/ASTRO.png'"
-        alt="{{ faction() | factionNamePipe }}"
-        class="faction-chip__icon"
-      />
-      <span class="faction-chip__name">{{ faction() | factionNamePipe }}</span>
-    </div>
-  } @else {
-    <div class="faction-chip faction-chip--no-faction">Error</div>
-  }
-</st-surface>
+@if (faction() === 'loading') {
+  <div class="faction-chip faction-chip--no-faction">Loading...</div>
+} @else if (faction()) {
+  <div class="faction-chip">
+    <img
+      [src]="'assets/img/faction-emblems/ASTRO.png'"
+      alt="{{ faction() | factionNamePipe }}"
+      class="faction-chip__icon"
+    />
+    <span class="faction-chip__name">{{ faction() | factionNamePipe }}</span>
+  </div>
+} @else {
+  <div class="faction-chip faction-chip--no-faction">Error</div>
+}

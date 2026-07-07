@@ -1,0 +1,16 @@
+<app-ship-component-card
+  [icon]="'engine'"
+  [title]="reactorDetails().name + ' - Quality: ' + reactorDetails().quality"
+  [condition]="reactorCondition()"
+  [integrity]="reactorIntegrity()"
+>
+  <div specs class="component-item" [appTooltip]="'Reactor power output'">
+    <i-tabler-icon [name]="'bolt'" />
+    <span class="component-item__text">{{ reactorDetails().powerOutput }}</span>
+  </div>
+
+  <div requirements class="component-item" [appTooltip]="'Crew required to operate the reactor'">
+    <i-tabler-icon [name]="'users'" />
+    <span class="component-item__text">{{ reactorDetails().requirements.crew }}</span>
+  </div>
+</app-ship-component-card>
